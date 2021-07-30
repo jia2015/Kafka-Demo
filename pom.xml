@@ -15,7 +15,8 @@
 	<name>kafka-demo</name>
 	<description>Demo project for Spring Kafka</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
+		<cloudevents-kafka.version>2.2.0</cloudevents-kafka.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -26,7 +27,26 @@
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
 		</dependency>
-
+		<dependency>
+            <groupId>io.cloudevents</groupId>
+            <artifactId>cloudevents-kafka</artifactId>
+            <version>${cloudevents-kafka.version}</version>
+        </dependency>
+        <dependency>
+	    	<groupId>io.cloudevents</groupId>
+		    <artifactId>cloudevents-api</artifactId>
+		    <version>${cloudevents-kafka.version}</version>
+		</dependency>
+		<dependency>
+	    	<groupId>io.cloudevents</groupId>
+		    <artifactId>cloudevents-core</artifactId>
+		    <version>${cloudevents-kafka.version}</version>
+		</dependency>
+        <dependency>
+            <groupId>io.cloudevents</groupId>
+            <artifactId>cloudevents-json-jackson</artifactId>
+            <version>${cloudevents-kafka.version}</version>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
